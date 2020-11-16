@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Wrap</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $(".container").wrap('<div class="wrapper"></div>');
+    
+    
+    $("button").click(function(){
+        $("p").contents().wrap("<em><b></b></em>");
+    });
+});
+</script>
+<style>
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    .wrapper{
+        padding: 20px;
+        background: #390099;
+        margin: 10px 0;
+    }
+    .container{
+        padding: 15px;
+        background: yellow;
+        font-size: 36px;
+    }
+</style>
+</head>
+<body>
+    <button type="button">Wrap Demo Text</button>
+    <div class="container">
+        <p>OBONGO KOMINGOLA.</p>
+    </div>
+</body>
+</html>
